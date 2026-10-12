@@ -1,0 +1,37 @@
+CAMPUS SIGNAL ISSUE TRACKER — SAMPLE OUTPUT
+
+Welcome to Campus Signal Issue Tracker!
+Saved issues loaded successfully.
+
+===== CAMPUS SIGNAL ISSUE TRACKER =====
+1. Report New Issue
+2. View All Issues
+3. Search Issue by ID
+4. Update Issue Status
+5. Delete Issue
+6. Exit
+Enter your choice: 1
+
+--- Report a New Signal Issue ---
+Enter campus location: College Library
+Enter network provider (Jio/Airtel/Vi/Other): Jio
+Enter problem type (Weak Signal/Call Drop/No Internet/Other): Weak Signal
+Enter short description: Calls disconnect near reading area
+
+Issue reported successfully. Issue ID: 1
+Status: Pending
+
+Enter your choice: 2
+
+--- All Reported Issues ---
+
+Issue ID: 1
+Location: College Library
+Network Provider: Jio
+Problem Type: Weak Signal
+Description: Calls disconnect near reading area
+Status: Pending
+------------------------------
+
+Enter your choice: 6
+Thank you for using the tracker.

@@ -1,5 +1,4 @@
 # Campus Signal Issue Tracker Using Singly Linked List
-## CCE-II Programming Assignment — Unit 3
 
 ### Problem Statement
 Develop a menu-driven C++ application to record mobile network signal issues reported in a college campus. Each complaint stores an issue ID, campus location, network provider, problem type, description, and status. Use a singly linked list to add, display, search, update, and delete issues. Use file handling to preserve records between program runs.

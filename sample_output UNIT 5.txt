@@ -1,0 +1,118 @@
+=== RAILWAY NETWORK PLANNER ===
+
+How many stations are there? 7
+  Name of station 1: Pune
+  Name of station 2: Mumbai
+  Name of station 3: Nashik
+  Name of station 4: Aurangabad
+  Name of station 5: Nagpur
+  Name of station 6: Kolhapur
+  Name of station 7: Solapur
+
+Your stations: Pune, Mumbai, Nashik, Aurangabad, Nagpur, Kolhapur, Solapur
+
+Now enter the possible tracks. For each track you will be asked
+for its two stations and its building cost.
+
+How many possible tracks are there? 11
+
+Track 1 of 11:
+  From station : Pune
+  To station   : Mumbai
+  Cost         : 120
+
+Track 2 of 11:
+  From station : Pune
+  To station   : Nashik
+  Cost         : 150
+
+Track 3 of 11:
+  From station : Pune
+  To station   : Kolhapur
+  Cost         : 200
+
+Track 4 of 11:
+  From station : Pune
+  To station   : Solapur
+  Cost         : 180
+
+Track 5 of 11:
+  From station : Mumbai
+  To station   : Nashik
+  Cost         : 100
+
+Track 6 of 11:
+  From station : Nashik
+  To station   : Aurangabad
+  Cost         : 140
+
+Track 7 of 11:
+  From station : Aurangabad
+  To station   : Nagpur
+  Cost         : 350
+
+Track 8 of 11:
+  From station : Nashik
+  To station   : Nagpur
+  Cost         : 420
+
+Track 9 of 11:
+  From station : Solapur
+  To station   : Kolhapur
+  Cost         : 160
+
+Track 10 of 11:
+  From station : Solapur
+  To station   : Aurangabad
+  Cost         : 250
+
+Track 11 of 11:
+  From station : Mumbai
+  To station   : Kolhapur
+  Cost         : 270
+
+============================================================================
+          MINIMUM-COST RAILWAY NETWORK  (Kruskal's Algorithm)
+============================================================================
+Stations (7)      : Pune, Mumbai, Nashik, Aurangabad, Nagpur, Kolhapur, Solapur
+Proposed tracks   : 11
+
+PART 1: Tracks in order of cost and Kruskal's decision
+----------------------------------------------------------------------------
+No.  Track                       Cost   Decision  Reason
+----------------------------------------------------------------------------
+1    Mumbai - Nashik             100    ACCEPT    joins two separate groups
+2    Pune - Mumbai               120    ACCEPT    joins two separate groups
+3    Nashik - Aurangabad         140    ACCEPT    joins two separate groups
+4    Pune - Nashik               150    REJECT    already connected (would form a cycle)
+5    Solapur - Kolhapur          160    ACCEPT    joins two separate groups
+6    Pune - Solapur              180    ACCEPT    joins two separate groups
+7    Pune - Kolhapur             200    REJECT    already connected (would form a cycle)
+8    Solapur - Aurangabad        250    REJECT    already connected (would form a cycle)
+9    Mumbai - Kolhapur           270    REJECT    already connected (would form a cycle)
+10   Aurangabad - Nagpur         350    ACCEPT    joins two separate groups
+(1 remaining track(s) not examined: the network is already complete.)
+----------------------------------------------------------------------------
+
+PART 2: Tracks selected for construction (minimum-cost network)
+----------------------------------------------------------------------------
+No.  From            To              Cost    Total so far
+----------------------------------------------------------------------------
+1    Mumbai          Nashik          100     100
+2    Pune            Mumbai          120     220
+3    Nashik          Aurangabad      140     360
+4    Solapur         Kolhapur        160     520
+5    Pune            Solapur         180     700
+6    Aurangabad      Nagpur          350     1050
+----------------------------------------------------------------------------
+
+PART 3: Summary
+----------------------------------------------------------------------------
+Stations              : 7
+Tracks proposed       : 11
+Tracks selected       : 6  (a network of 7 station(s) needs 6)
+Tracks rejected       : 4  (each would form a cycle)
+Tracks not examined   : 1
+Minimum total cost    : 1050
+Network status        : All 7 station(s) connected.
+============================================================================
